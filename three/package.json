@@ -1,7 +1,8 @@
 {
-  "name": "vite-three-test",
+  "name": "three-shaderfrog-example",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "Three.js Shaderfrog example",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +14,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
-    "@shaderfrog/core": "^1.0.5",
+    "@shaderfrog/core": "^1.0.10",
     "three": "^0.156.1"
   }
 }
