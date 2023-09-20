@@ -102,19 +102,9 @@ const graph = {
 };
 
 core.compileSource(graph, engine, ctx).then((compileResult) => {
-  console.log(
-    'compile result',
-    compileResult,
-    'isWebgl2',
-    renderer.capabilities.isWebGL2
-  );
+  console.log('compile result', compileResult);
 
   const material = createMaterial(compileResult, ctx);
-
-  const {
-    sceneData: { mesh },
-    engineMaterial,
-  } = ctx.runtime;
 
   material.uniforms = { ...material.uniforms, ...{} };
   material.roughness = 0;
@@ -122,7 +112,6 @@ core.compileSource(graph, engine, ctx).then((compileResult) => {
   console.log('🏞 Re-creating three.js material!', {
     material,
     uniforms: material.uniforms,
-    engineMaterial: ctx.runtime.engineMaterial,
   });
 
   mesh.material = material;
