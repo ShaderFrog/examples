@@ -2,12 +2,59 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>My first three.js app</title>
+		<title>Shaderfrog Three.js Example</title>
 		<style>
-			body { margin: 0; }
+			body {
+				margin: 0;
+				font-family: sans-serif;
+			}
+			.debugger {
+				padding:10px 20px;
+				position:fixed;
+				right:10px;
+				top:10px;
+			}
+			.debugger > div {
+				position:relative;
+				z-index: 1;
+			}
+			.debugger:before {
+				content: '';
+				z-index: 0;
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				background:#19191f99;
+				border-radius:4px;
+			}
+			textarea {
+				min-height: 200px;
+				width: 100%;
+				background:#1b1d21;
+				color:#fff;
+				padding:5px;
+				border:1px solid #383e4a;
+				border-radius:2	px;
+			}
+			label {
+				color: #fff;
+				font-weight: normal;
+				margin:10px 0 0;
+				display: block;
+			}
 		</style>
 	</head>
 	<body>
+		<div class="debugger">
+			<div>
+				<label for="fragment">Compiled Fragment GLSL</label>
+				<textarea id="fragment"></textarea>
+				<label for="vertex">Compiled Vertex GLSL</label>
+				<textarea id="vertex"></textarea>
+			</div>
+		</div>
 		<script type="module" src="/index.js"></script>
 	</body>
 </html>
