@@ -1,4 +1,4 @@
-Live Demo: [Codesandbox](https://codesandbox.io/s/shaderfrog-three-js-example-sjh425)
+Live Demo: [Codesandbox](https://codesandbox.io/s/great-hertz-sjh425)
 
 ```
 npm install
